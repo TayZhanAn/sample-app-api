@@ -7,11 +7,12 @@ export const loginUser = (params) => {
             if (res && res.data){
                 dispatch({
                     type: 'setUser',
-                    payload: {user: res.data}
+                    data: res.data
                 })
                 localStorage.setItem('user', JSON.stringify(res.data));
             }
         }).catch(err => {
+            console.log(err);
             message.error("Unable to login");
         })
     }

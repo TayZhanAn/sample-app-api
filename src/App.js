@@ -8,8 +8,10 @@ import Home from './container/home';
 import Dashboard from './container/dashboard';
 import Login from './container/login';
 import Table from './container/table';
+import axios from 'axios';
 
 export default function App() {
+  axios.defaults.withCredentials = true;
   return (
     <Router>
       <div>
